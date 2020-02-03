@@ -1,6 +1,6 @@
 <?php
 
-Route::post('register', 'Api\UserController@register')->name('register');
+Route::post('register', 'UserController@register')->name('register');
 
 Route::group(['middleware' => 'auth:api'], function(){
     Route::get('contacts/{query}', 'ContactController@search')->name('contacts.search');

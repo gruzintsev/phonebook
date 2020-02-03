@@ -85,7 +85,7 @@ class ContactTest extends TestCase
             'first_name' => 'Oleg',
             'phone_number' => 'not number',
             'country_code' => 'RU',
-            'timezone' => 'asdf',
+            'timezone' => 'as',
         ];
 
         $this->post(route('contacts.store'), $data, $this->headers)

@@ -5,3 +5,4 @@
 .idea
 storage/oauth-private.key
 storage/oauth-public.key
+.DS_Store

@@ -25,6 +25,8 @@ Realize such RESTful API
 ![](https://img.shields.io/badge/-PHPUnit-blue.png)
 ![](https://img.shields.io/badge/-Nginx-important.png)
 ![](https://img.shields.io/badge/-MySQL-blueviolet.png)
+![](https://img.shields.io/badge/-Redis-yellow.png)
+![](https://img.shields.io/badge/-Guzzle-black.png)
 
 
 ## Requirements
