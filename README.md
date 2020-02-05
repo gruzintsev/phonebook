@@ -45,7 +45,9 @@ $ vagrant ssh
 $ cd code
 $ vendor/bin/phpunit
 ```
+
 ##Test result
+
 ![](http://joxi.ru/EA4zPylFoNnNzm.jpg)
 
 ## Usage
