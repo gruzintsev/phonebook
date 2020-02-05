@@ -46,7 +46,7 @@ $ cd code
 $ vendor/bin/phpunit
 ```
 
-##Test result
+## Test result
 
 ![](http://joxi.ru/EA4zPylFoNnNzm.jpg)
 
