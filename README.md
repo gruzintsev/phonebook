@@ -37,7 +37,7 @@ Realize such RESTful API
 
 ```
 $ cd 'your_projects_directory'
-$ git clone https://gruzintsev@bitbucket.org/gruzintsev/phonebook.git gruzintsev_phonebook
+$ git clone https://github.com/gruzintsev/phonebook.git gruzintsev_phonebook
 $ cd gruzintsev_phonebook
 $ composer install
 $ vagrant up
@@ -45,6 +45,8 @@ $ vagrant ssh
 $ cd code
 $ vendor/bin/phpunit
 ```
+##Test result
+![](http://joxi.ru/EA4zPylFoNnNzm.jpg)
 
 ## Usage
 Add this line to /etc/hosts
