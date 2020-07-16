@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Services\Cache;
+use App\Services\ContactService;
 use App\Services\Hostaway;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Database\Eloquent\Builder;
@@ -25,6 +26,13 @@ class AppServiceProvider extends ServiceProvider
             Hostaway::class,
             function (Application $app) {
                 return new Hostaway();
+            }
+        );
+
+        $this->app->bind(
+            ContactService::class,
+            function (Application $app) {
+                return new ContactService();
             }
         );
 

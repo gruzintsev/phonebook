@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Contact;
 use App\Http\Requests\ContactCreateRequest;
 use App\Http\Requests\ContactUpdateRequest;
+use App\Services\ContactService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Pagination\Paginator;
 
@@ -21,7 +22,7 @@ class ContactController extends Controller
             return $page;
         });
 
-        return Contact::paginate($limit)->toArray();
+        return app(ContactService::class)->paginated($limit);
     }
 
     /**
@@ -39,9 +40,7 @@ class ContactController extends Controller
      */
     public function search(string $query)
     {
-        $contact = Contact::orWhereLike(['first_name', 'last_name'], $query)->get();
-
-        return $contact;
+        return app(ContactService::class)->search($query);
     }
 
     /**
@@ -50,7 +49,7 @@ class ContactController extends Controller
      */
     public function store(ContactCreateRequest $request)
     {
-        $contact = Contact::create($request->all());
+        $contact = app(ContactService::class)->create($request->all());
 
         return response()->json($contact);
     }
@@ -62,7 +61,7 @@ class ContactController extends Controller
      */
     public function update(ContactUpdateRequest $request, Contact $contact)
     {
-        $contact->update($request->all());
+        app(ContactService::class)->update($contact, $request->all());
 
         return response()->json($contact);
     }
@@ -74,7 +73,7 @@ class ContactController extends Controller
      */
     public function delete(Contact $contact)
     {
-        $contact->delete();
+        app(ContactService::class)->delete($contact);
 
         return response()->json(null, JsonResponse::HTTP_NO_CONTENT);
     }
